@@ -1,0 +1,6 @@
+{
+    "require": {
+        "sabre/vobject": "^4.5",
+        "symfony/dotenv": "^6.4"
+    }
+}
