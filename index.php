@@ -25,13 +25,13 @@ foreach ($calendar->getComponents() as $event) {
     $weeklyEvents[$week][$summary] += $duration;
 }
 ksort($weeklyEvents);
-echo "Durée totale des événements par semaine :\n";
+echo "Total duration of events per week :\n";
 foreach ($weeklyEvents as $week => $events) {
     ksort($events);
     $total = array_sum($events);
-    echo "\nSemaine $week (".round($total, 2)." heures) :\n";
+    echo "\nWeek $week (".round($total, 2)." hours) :\n";
     foreach ($events as $event => $duration) {
         $pct = $duration / $total * 100;
-        echo "  - $event : " . round($duration, 2) . " heures - ".round($pct)."%\n";
+        echo "  - $event : " . round($duration, 2) . " hours - ".round($pct)."%\n";
     }
 }
